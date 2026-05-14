@@ -1,0 +1,94 @@
+@media screen and (max-width: 750px) {
+
+    /* NavBar - navegação*/
+    #inicio {
+        position: static;
+        top: none;
+        z-index: none;
+    }
+
+    .inicio__lista li a {
+        width: 100%;
+
+        border-bottom: none;
+
+        transition: none;
+    }.inicio__lista li a:hover {
+        width: inherit;
+        border-bottom: none;
+    }
+
+    .redes a img {
+        transition: none;
+    }.redes a img:hover {
+        background: none;
+    }
+
+    /* Cabeçalho - header */
+    .abaInicial {
+        gap: 0;
+
+        display: flex;
+        justify-content: center;
+    }
+    /* text */
+    .abaInicial__text {
+        width: 50%;
+        margin: 0;
+
+        text-align: center;
+    }.abaInicial__text p{
+        text-indent: 0;
+        text-align: inherit;
+        font-family: var(--font-p-family);
+    }
+    /* imagem */
+    .abaInicial picture {
+        display: none;
+    }
+
+    /* Main - abaPrincipal */
+    #servicos {
+        gap: 2rem;
+    }
+    /* Removendo efeito de scale do card */
+    .servicos__bloco {
+        box-shadow: -5px -10px 10px #f8f8f8;
+    
+        transition: none;
+    }.servicos__bloco:hover {
+        box-shadow: none;
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* Header - textInitial */
+    .abaInicial__text {
+        width: 100%;
+    }.abaInicial__text p{
+        padding: 0 1rem;
+    }
+}
+@media screen and (max-width: 550px) {
+    /* NavBar */
+    #inicio {
+        gap: 1.5rem;
+
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    /* Navegação - list-nav */
+    .inicio__subList {
+        gap: 1rem;
+
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        align-items: center;
+    }
+    .inicio__lista{
+        gap: 1rem;
+    }
+}

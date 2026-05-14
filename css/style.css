@@ -1,0 +1,215 @@
+@import url('remixicon/fonts/remixicon.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/* Tag Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Background-Color-Nav: #f5f5f5;
+    --Hover-links-nav: #00ccffd3;
+    --Hover-links-Redes: #d3d3d3e3;
+
+    /* fonts */
+    --font-p-family: 'Roboto', sans-serif;
+    --font-h1-family: "Ubuntu", sans-serif;
+}
+
+/* barra de nevegação */
+#inicio {
+    width: 100%;
+    height: auto;
+    padding: 0.55rem 0;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+
+
+    background:var(--Background-Color-Nav);
+}
+.inicio__logo img {
+    width: 50px;
+    height: auto;
+}
+.inicio__lista{
+    gap: 2rem;
+
+    display: flex;
+    flex-flow: row wrap;
+}
+.inicio__lista li {
+    list-style: none;
+}
+.inicio__lista li a {
+    width: 0%;
+
+    display: block;
+
+    color: black;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: solid transparent 1px;
+
+    transition: .2s linear;
+}
+.inicio__lista li a:hover {
+    width: 100%;
+    border-bottom: solid var(--Hover-links-nav) 1px;
+}.inicio__lista li a:active {color: #505050;}
+
+/* Nav - Redes sociais */
+.redes {
+    gap: 0.75rem;
+    
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.redes a img {
+    width: 35px;
+
+    border-radius: 50px;
+
+    transition: .2s ease-in;
+}
+.redes a img:hover {
+    background: var(--Hover-links-Redes);
+}
+
+/* Header - cabeçalho */
+#cabecalho {
+    margin: 5rem 0 5rem 0;
+}
+.abaInicial {
+    gap: 5rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+/* text */
+.abaInicial__text {
+    width: 30%;
+    margin: 0 0 0 1.5rem;
+}
+.abaInicial__text p{
+    text-indent: 10px;
+    text-align: justify;
+    font-family: var(--font-p-family);
+}
+.abaInicial__text h1 {
+    color: black;
+    white-space: pre-line;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--font-h1-family);
+}
+/* imagem */
+.abaInicial picture {
+    width: 50%;
+    height: auto;
+
+    display: flex;
+    justify-content: end;
+
+    user-select: none;
+}
+.abaInicial picture img {
+    width: 60%;
+    height: auto;
+
+    position: relative;
+
+    animation: movimento 1.7s linear infinite alternate;
+}
+@keyframes movimento {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        bottom: 20px;
+    }
+
+    100% {
+        top: 20px;
+    }
+}
+
+/* Main - conteúdo */
+#content {
+    margin: 10rem 0 2.5rem 0;
+}
+/* Serviços */
+#servicos {
+    gap: 1rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.servicos__bloco {
+    height: 50vh;
+    padding: 0 1.5rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: transparent;
+    border: solid gainsboro 1px;
+    border-radius: 5px;
+
+    transition: .3s linear;
+}
+.servicos__bloco:hover {
+    box-shadow: 0px 10px 5px #bbbbbbce;
+    transform: scale(1.05);
+}
+
+.bloco__gameTitle {
+    gap: 0.75rem;
+
+    display: inherit;
+    flex-flow: column nowrap;
+
+    text-align: center;
+    font-family: var(--font-p-family);
+
+}.ri-gamepad-line {font-size: 35px;}
+.servicos__bloco a {
+    width: 30%;
+    padding: 0.5rem 0;
+
+    background: #00ec00;
+    border: none;
+    border-radius: 10px;
+
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--font-p-family);
+    font-size: small;
+
+    transition: .2s ease;
+}
+.servicos__bloco a:hover {
+    cursor: pointer;
+
+    transform: scale(1.02);
+} .servicos__bloco a:active {
+    background: #00c500;
+}
